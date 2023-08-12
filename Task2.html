@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ostad Assignment</title>
+  </head>
+  <body>
+    <h1>Task 2</h1>
+    <script>
+      function findMaxNumber(numbers) {
+        if (numbers.length == 0) {
+          return null;
+        } else {
+          let maxNumber = numbers[0];
+          let numbersLength = numbers.length;
+
+          for (i = 1; i < numbersLength; i++) {
+            if (numbers[i] > maxNumber) {
+              maxNumber = numbers[i];
+            }
+          }
+
+          return maxNumber;
+        }
+      }
+
+      const numbers1 = [10, 20, 5, 30, 25];
+
+      console.log(findMaxNumber(numbers1)); // Output: 30
+
+      const numbers2 = [5, 15, 7];
+
+      console.log(findMaxNumber(numbers2)); // Output: 15
+
+      const emptyArray = [];
+
+      console.log(findMaxNumber(emptyArray)); // Output: null
+    </script>
+  </body>
+</html>
